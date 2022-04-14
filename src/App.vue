@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <NavigationComp />
-    <router-view :key="$route.path" />
+    <transition name="slide" mode="out-in">
+      <router-view :key="$route.path" />
+    </transition>
   </div>
 </template>
 
@@ -65,10 +67,6 @@ h6 {
   color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
-}
-
 nav a {
   font-weight: bold;
   color: #2c3e50;
@@ -77,5 +75,20 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+
+/* slide animation */
+.slide-enter-active,
+.slide-leave-active {
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.slide-enter {
+  opacity: 0;
+  transform: translateX(-20%);
+}
+.slide-leave-to {
+  opacity: 0;
+  transform: translateX(20%);
 }
 </style>

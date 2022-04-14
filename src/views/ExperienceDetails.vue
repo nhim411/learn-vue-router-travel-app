@@ -39,8 +39,6 @@ export default {
 </script>
 
 <style scoped>
-.experences {
-}
 .exp-title {
   margin: 20px 0;
 }
@@ -49,7 +47,6 @@ export default {
 }
 .exp-details {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -57,7 +54,7 @@ export default {
   margin-bottom: 20px;
 }
 .exp-desc {
-  padding: 0 10px;
+  padding: 10px;
   text-align: justify;
 }
 </style>

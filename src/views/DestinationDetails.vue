@@ -15,7 +15,7 @@
       <h2 class="experiences-title">
         Top experiences in {{ destination.name }}
       </h2>
-      <div class="cards">
+      <div class="cards" id="experience">
         <div
           class="card"
           v-for="experience in destination.experiences"
@@ -25,8 +25,8 @@
             :to="{
               name: 'experienceDetails',
               params: { experienceSlug: experience.slug },
+              hash: '#experience',
             }"
-            es
           >
             <img
               :src="require(`@/assets/${experience.image}`)"
@@ -36,7 +36,9 @@
           </router-link>
         </div>
       </div>
-      <router-view :key="$route.path" />
+      <transition name="fade">
+        <router-view :key="$route.path" />
+      </transition>
     </section>
   </div>
 </template>
@@ -117,5 +119,15 @@ export default {
 
 .experiences-title {
   margin: 10px 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
