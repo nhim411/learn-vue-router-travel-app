@@ -52,7 +52,7 @@ export default {
   methods: {
     login() {
       //authenticate
-      store.user = this.username;
+      store.user = this.username || "default name";
       this.$router.push({ name: "user" });
     },
   },
