@@ -2,7 +2,7 @@
   <div class="wrapper">
     <form class="login">
       <p class="title">Log in</p>
-      <input type="text" placeholder="Username" v-model="username" autofocus />
+      <input type="text" placeholder="Username" v-model="username" />
       <i class="fa fa-user"></i>
       <input type="password" placeholder="Password" v-model="password" />
       <i class="fa fa-key"></i>
@@ -38,9 +38,9 @@ export default {
           $state.html("Log in");
           $this.removeClass("ok loading");
           working = false;
-        }, 2000);
-        vm.login();
-      }, 2000);
+          vm.login();
+        }, 1000);
+      }, 1000);
     });
   },
   data() {
