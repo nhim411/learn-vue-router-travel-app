@@ -153,5 +153,4 @@ export default {
       ],
     },
   ],
-  user: "a",
 };

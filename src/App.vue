@@ -11,6 +11,9 @@
 import NavigationComp from "@/components/NavigationComp";
 export default {
   components: { NavigationComp },
+  created() {
+    window.isLogin = false;
+  },
 };
 </script>
 

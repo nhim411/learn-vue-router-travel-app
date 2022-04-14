@@ -22,11 +22,11 @@
         </router-link>
       </li>
       <li class="link">
-        <router-link :to="{ name: 'user' }">User</router-link>
+        <router-link :to="{ name: 'user' }">Dashboard</router-link>
       </li>
-      <li class="link">
+      <!-- <li class="link">
         <router-link :to="{ name: 'login' }">Login</router-link>
-      </li>
+      </li> -->
     </ul>
   </nav>
 </template>

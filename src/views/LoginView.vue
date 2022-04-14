@@ -12,13 +12,12 @@
         <span class="state">Log in</span>
       </button>
     </form>
-    <footer><a target="blank" href="http://boudra.me/">boudra.me</a></footer>
   </div>
 </template>
 
 <script>
 import jq from "jquery";
-// import store from "@/store.js";
+import store from "@/store.js";
 
 export default {
   mounted() {
@@ -53,8 +52,8 @@ export default {
   methods: {
     login() {
       //authenticate
-      console.log("log");
-      this.$router.push({ name: "home" });
+      store.user = this.username;
+      this.$router.push({ name: "user" });
     },
   },
 };
@@ -92,6 +91,7 @@ body {
   width: 100%;
   min-height: 100%;
   padding: 20px;
+
   background: #000046; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
