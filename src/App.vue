@@ -59,6 +59,11 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
+
+html,
+body {
+  overflow-x: hidden;
+}
 #app {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
